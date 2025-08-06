@@ -1,0 +1,19 @@
+/* /styles/particles.css */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  filter: drop-shadow(0 0 4px currentColor);
+  animation: drift linear infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: var(--start-opacity);
+  }
+  100% {
+    transform: translateX(var(--x-end)) translateY(var(--y-end));
+    opacity: 0;
+  }
+}
